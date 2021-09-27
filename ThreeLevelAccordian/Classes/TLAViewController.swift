@@ -222,7 +222,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
         } else if (item as? TLASubItem != nil) {
             if isMultiline {
                 tableView.estimatedRowHeight = 100
-                return UITableViewAutomaticDimension
+                return UITableView.automaticDimension
             } else {
                 return subItemCellHeight
             }
@@ -246,7 +246,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             if let accessoryView = accessory(for: indexPath, and: .expand) {
                 cell.accessoryView = accessoryView
             } else {
-                cell.accessoryType = UITableViewCellAccessoryType.none
+                cell.accessoryType = UITableViewCell.AccessoryType.none
                 cell.accessoryView = nil
             }
 
@@ -270,7 +270,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 }
                 
                 cell.accessoryView = nil
-                cell.accessoryType = UITableViewCellAccessoryType.none
+                cell.accessoryType = UITableViewCell.AccessoryType.none
                 
                 if let subItemCellBackgrondColor = self.subItemCellBackgrondColor {
                     cell.backgroundColor = subItemCellBackgrondColor
@@ -317,7 +317,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let accessoryView = accessory(for: previousIndexPath, and: .expand) {
                     previousCell?.accessoryView = accessoryView
                 } else {
-                    previousCell?.accessoryType = UITableViewCellAccessoryType.none
+                    previousCell?.accessoryType = UITableViewCell.AccessoryType.none
                     previousCell?.accessoryView = nil
                 }
 
@@ -337,7 +337,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             if let accessoryView = accessory(for: indexPath, and: accessoryType) {
                 cell?.accessoryView = accessoryView
             } else {
-                cell?.accessoryType = UITableViewCellAccessoryType.none
+                cell?.accessoryType = UITableViewCell.AccessoryType.none
                 cell?.accessoryView = nil
             }
             
@@ -356,7 +356,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let accessoryView = accessory(for: previousIndexPath, and: .expand) {
                     previousCell?.accessoryView = accessoryView
                 } else {
-                    previousCell?.accessoryType = UITableViewCellAccessoryType.none
+                    previousCell?.accessoryType = UITableViewCell.AccessoryType.none
                     previousCell?.accessoryView = nil
                 }
                 collapse(previouslySelectedItemIndex)
@@ -374,7 +374,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
             if let accessoryView = accessory(for: indexPath, and: accessoryType) {
                 cell?.accessoryView = accessoryView
             } else {
-                cell?.accessoryType = UITableViewCellAccessoryType.none
+                cell?.accessoryType = UITableViewCell.AccessoryType.none
                 cell?.accessoryView = nil
             }
         }
@@ -416,7 +416,7 @@ extension TLAViewController: UITableViewDelegate, UITableViewDataSource {
                 if let accessoryView = accessory(for: indexPath, and: .expand) {
                     hiddenCell?.accessoryView = accessoryView
                 } else {
-                    hiddenCell?.accessoryType = UITableViewCellAccessoryType.none
+                    hiddenCell?.accessoryType = UITableViewCell.AccessoryType.none
                     hiddenCell?.accessoryView = nil
                 }
             }
